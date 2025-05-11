@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Typography, Box, Grid, Card, CardMedia, CardContent, Button, IconButton } from '@mui/material';
+import { Container, Typography, Box, Card, CardMedia, CardContent, Button, IconButton } from '@mui/material';
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import productsData from '../../data/products.json';
 import '../../styles/components/home/FeaturedProducts.scss';
@@ -8,8 +8,10 @@ import '../../styles/components/home/FeaturedProducts.scss';
 const FeaturedProducts = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
+  const carouselRef = useRef(null);
   
-  const featuredProducts = productsData.filter(product => product.featured);
+  // Get only 5 featured products
+  const featuredProducts = productsData.filter(product => product.featured).slice(0, 5);
   
   useEffect(() => {
     let interval;
@@ -32,6 +34,43 @@ const FeaturedProducts = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % featuredProducts.length);
   };
   
+  // Calculate position for each product in the carousel
+  const getProductStyle = (index) => {
+    const totalItems = featuredProducts.length;
+    const centerIndex = currentIndex;
+    
+    // Calculate position based on distance from center
+    const position = index - centerIndex;
+    const normalizedPosition = ((position + totalItems) % totalItems);
+    
+    // Calculate distance from center (0 to 2, where 0 is center and 2 is furthest)
+    let distanceFromCenter;
+    if (normalizedPosition <= totalItems / 2) {
+      distanceFromCenter = normalizedPosition;
+    } else {
+      distanceFromCenter = totalItems - normalizedPosition;
+    }
+    
+    // Calculate opacity and scale based on distance from center
+    const opacity = 1 - (distanceFromCenter * 0.2);
+    const scale = 1 - (distanceFromCenter * 0.1);
+    
+    // Calculate horizontal position
+    const translateX = position * 80; // percentage of width
+    
+    return {
+      opacity: opacity,
+      transform: `translateX(${translateX}%)`,
+      zIndex: 5 - distanceFromCenter,
+      scale: scale,
+      position: 'relative',
+      transition: 'all 0.5s ease-in-out',
+      width: '300px',
+      maxWidth: '100%',
+      margin: '0 -30px', // Negative margin to bring items closer
+    };
+  };
+  
   return (
     <section className="featured-products section">
       <Container maxWidth="lg">
@@ -39,20 +78,17 @@ const FeaturedProducts = () => {
           Featured Collection
         </Typography>
         
-        <Box className="featured-slider">
+        <Box className="featured-slider" ref={carouselRef}>
           <IconButton className="slider-arrow prev" onClick={handlePrev}>
             <ArrowBack />
           </IconButton>
           
-          <Grid container spacing={4}>
+          <Box className="carousel-container">
             {featuredProducts.map((product, index) => (
-              <Grid 
-                item 
-                xs={12} 
-                md={6} 
-                lg={4} 
+              <Box 
                 key={product.id}
                 className={`product-item ${index === currentIndex ? 'active' : ''}`}
+                sx={getProductStyle(index)}
               >
                 <Card className="product-card">
                   <CardMedia
@@ -83,9 +119,9 @@ const FeaturedProducts = () => {
                     </Button>
                   </CardContent>
                 </Card>
-              </Grid>
+              </Box>
             ))}
-          </Grid>
+          </Box>
           
           <IconButton className="slider-arrow next" onClick={handleNext}>
             <ArrowForward />
