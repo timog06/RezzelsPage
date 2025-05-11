@@ -22,11 +22,11 @@ const TeamPage = () => {
               <Card className="team-card">
                 <CardMedia
                   component="img"
-                  height="250"
+                  height="180"
                   image={`${member.image}`}
                   alt={member.name}
                   className="team-image"
-                  style={{ objectFit: "contain" }}
+                  style={{ objectFit: "contain", maxWidth: "100%", margin: "0 auto" }}
                 />
                 <CardContent className="team-content">
                   <Typography variant="h5" className="team-name">

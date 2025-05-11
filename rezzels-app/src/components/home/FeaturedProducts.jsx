@@ -57,10 +57,11 @@ const FeaturedProducts = () => {
                 <Card className="product-card">
                   <CardMedia
                     component="img"
-                    height="300"
+                    height="180"
                     image={`${product.images[0]}`}
                     alt={product.name}
                     className="product-image"
+                    style={{ objectFit: "contain", maxWidth: "100%", margin: "0 auto" }}
                   />
                   <CardContent className="product-content">
                     <Typography variant="h5" className="product-title">

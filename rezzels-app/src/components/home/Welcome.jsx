@@ -12,6 +12,7 @@ const Welcome = () => {
                 src="rezzels-logo.jpg" 
                 alt="Rezzels Logo" 
                 className="welcome-image"
+                style={{ maxHeight: "200px", maxWidth: "100%", objectFit: "contain", margin: "0 auto", display: "block" }}
               />
             </Box>
           </Grid>

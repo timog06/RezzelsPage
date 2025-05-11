@@ -97,6 +97,7 @@ const ProductPage = () => {
                   src={`${product.images[currentImage]}`} 
                   alt={product.name} 
                   className="main-image"
+                  style={{ maxHeight: "300px", maxWidth: "100%", objectFit: "contain", margin: "0 auto", display: "block" }}
                 />
               </Box>
               
@@ -288,6 +289,7 @@ const ProductPage = () => {
                         src={`${relatedProduct.images[0]}`} 
                         alt={relatedProduct.name} 
                         className="related-product-image"
+                        style={{ height: "150px", maxWidth: "100%", objectFit: "contain", margin: "0 auto", display: "block" }}
                       />
                       <Box className="related-product-info">
                         <Typography variant="h6" className="related-product-name">
