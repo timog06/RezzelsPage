@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "year": 2020,
+    "title": "Founded",
+    "description": "Rezzels was established with a mission to create sustainable, stylish clothing."
+  },
+  {
+    "id": 2,
+    "year": 2021,
+    "title": "First Collection",
+    "description": "Launched our debut collection featuring hoodies and t-shirts."
+  },
+  {
+    "id": 3,
+    "year": 2022,
+    "title": "Expansion",
+    "description": "Added accessories and expanded our product line to include more styles."
+  },
+  {
+    "id": 4,
+    "year": 2023,
+    "title": "Sustainability Certification",
+    "description": "Achieved industry recognition for our eco-friendly manufacturing processes."
+  },
+  {
+    "id": 5,
+    "year": 2024,
+    "title": "Global Reach",
+    "description": "Expanded to international markets while maintaining our commitment to quality."
+  }
+]

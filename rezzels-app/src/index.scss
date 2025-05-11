@@ -1,0 +1,22 @@
+@use './styles/variables.scss' as *;
+@use './styles/mixins.scss' as *;
+@use './styles/base.scss';
+@use './styles/components.scss';
+@use './styles/main.scss';
+
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --accent-color: #{$accent-color};
+  --text-color: #{$text-color};
+  --light-gray: #{$light-gray};
+  --medium-gray: #{$medium-gray};
+  --dark-gray: #{$dark-gray};
+  --white: #{$white};
+  --black: #{$black};
+  --font-heading: #{$font-heading};
+  --font-body: #{$font-body};
+  --transition: #{$transition};
+  --shadow: #{$shadow};
+  --container-width: #{$container-width};
+}

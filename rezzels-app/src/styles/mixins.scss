@@ -1,0 +1,105 @@
+@use './variables.scss' as *;
+
+// Flexbox mixins
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Typography mixins
+@mixin heading($size, $weight: 600, $color: $primary-color) {
+  font-family: $font-heading;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  line-height: 1.2;
+}
+
+@mixin body-text($size: 1rem, $color: $text-color, $line-height: 1.6) {
+  font-family: $font-body;
+  font-size: $size;
+  color: $color;
+  line-height: $line-height;
+}
+
+// Section title with underline
+@mixin section-title($align: center) {
+  position: relative;
+  padding-bottom: $spacing-sm;
+  margin-bottom: $spacing-lg;
+  
+  @if $align == center {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: $secondary-color;
+    }
+  } @else {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: $secondary-color;
+    }
+  }
+}
+
+// Media queries
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: $breakpoint-md) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: $breakpoint-xl) { @content; }
+  }
+}
+
+// Card hover effect
+@mixin card-hover {
+  transition: $transition;
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+// Button styles
+@mixin button($bg-color: $primary-color, $text-color: $white) {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: $bg-color;
+  color: $text-color;
+  border-radius: $border-radius-sm;
+  font-weight: 500;
+  text-align: center;
+  transition: $transition;
+  border: none;
+  cursor: pointer;
+}

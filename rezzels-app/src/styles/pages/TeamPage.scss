@@ -1,0 +1,113 @@
+@use '../variables.scss' as *;
+@use '../mixins.scss' as *;
+
+.team-page {
+  padding: $spacing-xxl 0;
+}
+
+.page-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto $spacing-xxl;
+}
+
+.page-title {
+  margin-bottom: $spacing-md !important;
+  position: relative;
+  padding-bottom: $spacing-sm;
+  
+  @include section-title(center);
+}
+
+.page-description {
+  color: $dark-gray;
+  font-size: 1.1rem !important;
+  line-height: 1.8 !important;
+}
+
+.team-grid {
+  margin-bottom: $spacing-xxl;
+}
+
+.team-card {
+  height: 100%;
+  @include card-hover;
+  
+  &:hover {
+    .team-image {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.team-image {
+  transition: transform 0.5s ease;
+  object-fit: cover;
+}
+
+.team-content {
+  padding: $spacing-md !important;
+  text-align: center;
+}
+
+.team-name {
+  margin-bottom: $spacing-xs !important;
+  color: $primary-color;
+  font-weight: 600 !important;
+}
+
+.team-position {
+  color: $secondary-color;
+  margin-bottom: $spacing-sm !important;
+  font-weight: 500 !important;
+}
+
+.team-bio {
+  color: $dark-gray;
+  line-height: 1.6 !important;
+}
+
+.join-team {
+  background-color: $light-gray;
+  padding: $spacing-xl;
+  border-radius: $border-radius;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.join-title {
+  margin-bottom: $spacing-md !important;
+  color: $primary-color;
+}
+
+.join-description {
+  margin-bottom: $spacing-lg !important;
+  color: $dark-gray;
+  line-height: 1.8 !important;
+}
+
+.join-button {
+  @include button($primary-color, $white);
+  padding: 0.75rem 2rem;
+  border-radius: $border-radius-sm;
+  
+  &:hover {
+    background-color: $secondary-color;
+    transform: translateY(-3px);
+  }
+}
+
+@include respond-to(md) {
+  .team-page {
+    padding: $spacing-xl 0;
+  }
+  
+  .page-header {
+    margin-bottom: $spacing-xl;
+  }
+  
+  .join-team {
+    padding: $spacing-lg;
+  }
+}

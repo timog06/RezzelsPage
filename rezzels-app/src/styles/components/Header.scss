@@ -1,0 +1,133 @@
+@use '../variables.scss' as *;
+@use '../mixins.scss' as *;
+
+.header {
+  background-color: $white !important;
+  color: $primary-color !important;
+  box-shadow: $shadow !important;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0 !important;
+}
+
+.logo-container {
+  flex: 1;
+}
+
+.logo {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 1.75rem !important;
+  letter-spacing: 2px;
+  color: $primary-color;
+  text-decoration: none;
+}
+
+.desktop-menu {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.nav-link {
+  margin: 0 0.5rem !important;
+  color: $primary-color !important;
+  font-weight: 500 !important;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: $secondary-color;
+    transition: width 0.3s ease;
+  }
+  
+  &:hover::after,
+  &.active::after {
+    width: 80%;
+  }
+  
+  &.active {
+    color: $secondary-color !important;
+  }
+}
+
+.search-cart {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: $light-gray;
+  border-radius: 20px;
+  padding: 0.25rem 0.75rem;
+  margin-right: 1rem;
+  
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+.search-icon {
+  color: $dark-gray;
+  margin-right: 0.5rem;
+}
+
+.search-input {
+  color: $text-color;
+}
+
+.cart-button {
+  color: $primary-color !important;
+  margin-right: 0.5rem !important;
+}
+
+.menu-button {
+  color: $primary-color !important;
+  display: none !important;
+  
+  @media (max-width: 900px) {
+    display: inline-flex !important;
+  }
+}
+
+.mobile-menu {
+  width: 250px;
+  padding: 1rem 0;
+}
+
+.drawer {
+  .MuiDrawer-paper {
+    width: 250px;
+    background-color: $white;
+  }
+  
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    
+    &.active {
+      background-color: $light-gray;
+      color: $secondary-color;
+      border-left: 3px solid $secondary-color;
+    }
+  }
+}

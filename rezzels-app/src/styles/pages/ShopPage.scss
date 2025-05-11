@@ -1,0 +1,84 @@
+@use '../variables.scss' as *;
+@use '../mixins.scss' as *;
+
+.shop-page {
+  padding: $spacing-xxl 0;
+}
+
+.page-title {
+  margin-bottom: $spacing-lg;
+  position: relative;
+  padding-bottom: $spacing-sm;
+  
+  @include section-title(left);
+}
+
+.filter-section {
+  margin-bottom: $spacing-xl;
+  padding: $spacing-md;
+  background-color: $light-gray;
+  border-radius: $border-radius;
+}
+
+.products-section {
+  min-height: 400px;
+}
+
+.no-products {
+  text-align: center;
+  padding: $spacing-xl 0;
+  color: $dark-gray;
+}
+
+.product-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: $transition;
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: $shadow-lg;
+    
+    .product-image {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.product-image {
+  transition: transform 0.5s ease;
+  object-fit: cover;
+}
+
+.product-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-md !important;
+}
+
+.product-title {
+  font-weight: 600 !important;
+  margin-bottom: $spacing-xs !important;
+}
+
+.product-category {
+  margin-bottom: $spacing-sm !important;
+  color: $dark-gray !important;
+}
+
+.product-price {
+  color: $accent-color !important;
+  margin-bottom: $spacing-md !important;
+  font-weight: 700 !important;
+}
+
+.product-button {
+  margin-top: auto !important;
+  background-color: $primary-color !important;
+  
+  &:hover {
+    background-color: $secondary-color !important;
+  }
+}

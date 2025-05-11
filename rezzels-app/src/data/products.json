@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "name": "Black Hoodie",
+    "category": "Hoodies",
+    "price": 49.99,
+    "description": "Comfortable black hoodie with Rezzels logo",
+    "images": ["hoodie-black-front.jpg", "hoodie-black-back.jpg"],
+    "featured": true,
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Black"]
+  },
+  {
+    "id": 2,
+    "name": "Gray Hoodie",
+    "category": "Hoodies",
+    "price": 49.99,
+    "description": "Comfortable gray hoodie with Rezzels logo",
+    "images": ["hoodie-gray-front.jpg", "hoodie-gray-back.jpg"],
+    "featured": true,
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Gray"]
+  },
+  {
+    "id": 3,
+    "name": "Black Sweater",
+    "category": "Sweaters",
+    "price": 39.99,
+    "description": "Stylish black sweater with Rezzels logo",
+    "images": ["sweater-black-front.jpg", "sweater-black-back.jpg"],
+    "featured": false,
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Black"]
+  },
+  {
+    "id": 4,
+    "name": "Gray Sweater",
+    "category": "Sweaters",
+    "price": 39.99,
+    "description": "Stylish gray sweater with Rezzels logo",
+    "images": ["sweater-gray-front.jpg", "sweater-gray-back.jpg"],
+    "featured": false,
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Gray"]
+  },
+  {
+    "id": 5,
+    "name": "Black T-Shirt",
+    "category": "T-Shirts",
+    "price": 24.99,
+    "description": "Classic black t-shirt with Rezzels logo",
+    "images": ["shirt-black-front.jpg", "shirt-black-back.jpg"],
+    "featured": true,
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Black"]
+  },
+  {
+    "id": 6,
+    "name": "White T-Shirt",
+    "category": "T-Shirts",
+    "price": 24.99,
+    "description": "Classic white t-shirt with Rezzels logo",
+    "images": ["shirt-white-front.jpg", "shirt-white-back.jpg"],
+    "featured": false,
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["White"]
+  },
+  {
+    "id": 7,
+    "name": "Rezzels Cap",
+    "category": "Accessories",
+    "price": 19.99,
+    "description": "Stylish cap with Rezzels logo",
+    "images": ["cap1.jpg", "coming-soon.png"],
+    "featured": false,
+    "sizes": ["One Size"],
+    "colors": ["Black"]
+  },
+  {
+    "id": 8,
+    "name": "Rezzels Mug",
+    "category": "Accessories",
+    "price": 14.99,
+    "description": "Ceramic mug with Rezzels logo",
+    "images": ["mug1.jpg", "coming-soon.png"],
+    "featured": false,
+    "sizes": ["One Size"],
+    "colors": ["White"]
+  },
+  {
+    "id": 9,
+    "name": "Rezzels Bag",
+    "category": "Accessories",
+    "price": 29.99,
+    "description": "Durable bag with Rezzels logo",
+    "images": ["bag1.jpg", "coming-soon.png"],
+    "featured": true,
+    "sizes": ["One Size"],
+    "colors": ["Black"]
+  }
+]

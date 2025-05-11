@@ -1,0 +1,226 @@
+@use 'sass:color';
+@use '../variables.scss' as *;
+@use '../mixins.scss' as *;
+
+.jobs-page {
+  padding: $spacing-xxl 0;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: $spacing-xxl;
+}
+
+.page-title {
+  margin-bottom: $spacing-sm !important;
+  position: relative;
+  padding-bottom: $spacing-sm;
+  
+  @include section-title(center);
+}
+
+.page-subtitle {
+  color: $dark-gray;
+  font-size: 1.2rem !important;
+}
+
+.jobs-intro {
+  margin-bottom: $spacing-xxl;
+  background-color: $light-gray;
+  padding: 2.5rem;
+  border-radius: $border-radius;
+}
+
+.intro-title {
+  margin-bottom: $spacing-md !important;
+  color: $primary-color;
+  position: relative;
+  padding-bottom: $spacing-sm;
+  
+  @include section-title(left);
+}
+
+.intro-text {
+  margin-bottom: $spacing-md !important;
+  color: $text-color;
+  line-height: 1.8 !important;
+}
+
+.benefits-list {
+  padding-left: $spacing-md;
+  margin-bottom: 0;
+  
+  li {
+    margin-bottom: 0.75rem;
+    color: $text-color;
+    line-height: 1.6;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.open-positions {
+  margin-bottom: $spacing-xxl;
+}
+
+.positions-title {
+  margin-bottom: $spacing-lg !important;
+  color: $primary-color;
+  position: relative;
+  padding-bottom: $spacing-sm;
+  
+  @include section-title(left);
+}
+
+.job-card {
+  transition: $transition;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.job-content {
+  padding: $spacing-lg !important;
+}
+
+.job-header {
+  @include flex-between;
+  align-items: flex-start;
+  margin-bottom: $spacing-md;
+}
+
+.job-title {
+  margin-bottom: 0.75rem !important;
+  color: $primary-color;
+  font-weight: 600 !important;
+}
+
+.job-meta {
+  display: flex;
+  gap: $spacing-md;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+}
+
+.meta-icon {
+  color: $secondary-color;
+  font-size: 1.25rem !important;
+  margin-right: $spacing-xs;
+}
+
+.meta-text {
+  color: $dark-gray;
+}
+
+.apply-chip {
+  background-color: $secondary-color !important;
+  color: $white !important;
+  font-weight: 500 !important;
+  cursor: pointer;
+  transition: $transition !important;
+  
+  &:hover {
+    background-color: color.adjust($secondary-color, $lightness: -10%) !important;
+    transform: translateY(-2px);
+  }
+}
+
+.job-description {
+  margin-bottom: $spacing-md !important;
+  color: $text-color;
+  line-height: 1.8 !important;
+}
+
+.requirements-title {
+  margin-bottom: $spacing-sm !important;
+  color: $primary-color;
+}
+
+.requirements-list {
+  padding-left: $spacing-md;
+  margin-bottom: $spacing-lg;
+  
+  li {
+    margin-bottom: 0.75rem;
+    color: $text-color;
+    line-height: 1.6;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.apply-button {
+  background-color: $primary-color !important;
+  padding: 0.75rem 2rem !important;
+  
+  &:hover {
+    background-color: $secondary-color !important;
+  }
+}
+
+.no-positions {
+  background-color: $light-gray;
+  padding: 2.5rem;
+  border-radius: $border-radius;
+  text-align: center;
+}
+
+.no-positions-title {
+  margin-bottom: $spacing-sm !important;
+  color: $primary-color;
+}
+
+.no-positions-text {
+  color: $text-color;
+  line-height: 1.8 !important;
+  
+  a {
+    color: $secondary-color;
+    font-weight: 500;
+    
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+@include respond-to(md) {
+  .jobs-page {
+    padding: $spacing-xl 0;
+  }
+  
+  .page-header {
+    margin-bottom: $spacing-xl;
+  }
+  
+  .jobs-intro {
+    padding: $spacing-md;
+    margin-bottom: $spacing-xl;
+  }
+  
+  .job-header {
+    flex-direction: column;
+    
+    .apply-chip {
+      margin-top: $spacing-sm;
+    }
+  }
+  
+  .job-meta {
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+  
+  .no-positions {
+    padding: $spacing-md;
+  }
+}

@@ -1,0 +1,59 @@
+@use '../../variables.scss' as *;
+@use '../../mixins.scss' as *;
+
+.services-section {
+  background-color: $light-gray;
+  padding: $spacing-xxl 0;
+}
+
+.service-card {
+  padding: $spacing-lg;
+  text-align: center;
+  height: 100%;
+  transition: $transition;
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: $shadow-lg !important;
+    
+    .service-icon {
+      background-color: $secondary-color;
+      color: $white;
+    }
+  }
+}
+
+.service-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: $light-gray;
+  color: $primary-color;
+  @include flex-center;
+  margin: 0 auto $spacing-md;
+  transition: $transition;
+  
+  svg {
+    font-size: 2rem;
+  }
+}
+
+.service-title {
+  margin-bottom: $spacing-sm !important;
+  color: $primary-color;
+  font-weight: 600 !important;
+}
+
+.service-description {
+  color: $dark-gray;
+}
+
+@include respond-to(md) {
+  .services-section {
+    padding: $spacing-xl 0;
+  }
+  
+  .service-card {
+    margin-bottom: $spacing-sm;
+  }
+}

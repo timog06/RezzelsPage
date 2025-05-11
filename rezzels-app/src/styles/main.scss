@@ -1,0 +1,26 @@
+// Use all style files
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
+@use './base.scss';
+@use './components.scss';
+
+// Use component styles
+@use './components/Header.scss';
+@use './components/Footer.scss';
+@use './components/home/Hero.scss';
+@use './components/home/Welcome.scss';
+@use './components/home/FeaturedProducts.scss';
+@use './components/home/Services.scss';
+@use './components/home/Timeline.scss';
+@use './components/home/Quotes.scss';
+
+// Use page styles
+@use './pages/HomePage.scss';
+@use './pages/ShopPage.scss';
+@use './pages/ProductPage.scss';
+@use './pages/TeamPage.scss';
+@use './pages/AboutPage.scss';
+@use './pages/ContactPage.scss';
+@use './pages/JobsPage.scss';
+@use './pages/LegalPages.scss';
+@use './pages/NotFoundPage.scss';

@@ -1,0 +1,83 @@
+@use '../../variables.scss' as *;
+@use '../../mixins.scss' as *;
+
+.quotes-section {
+  background-color: $white;
+  padding: $spacing-xxl 0;
+}
+
+.quotes-container {
+  position: relative;
+  height: 250px;
+  margin-bottom: $spacing-lg;
+}
+
+.quote-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2.5rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quote-icon {
+  font-size: 3rem !important;
+  color: $secondary-color;
+  opacity: 0.3;
+  margin-bottom: $spacing-sm;
+}
+
+.quote-text {
+  font-style: italic;
+  margin-bottom: $spacing-md !important;
+  line-height: 1.6 !important;
+  color: $primary-color;
+}
+
+.quote-author {
+  color: $dark-gray;
+  font-weight: 500 !important;
+}
+
+.quote-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.quote-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $medium-gray;
+  cursor: pointer;
+  transition: $transition;
+  
+  &.active {
+    background-color: $secondary-color;
+    transform: scale(1.2);
+  }
+  
+  &:hover {
+    background-color: $dark-gray;
+  }
+}
+
+@include respond-to(md) {
+  .quotes-container {
+    height: 300px;
+  }
+  
+  .quote-card {
+    padding: $spacing-lg $spacing-md;
+  }
+}

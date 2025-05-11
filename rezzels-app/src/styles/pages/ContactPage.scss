@@ -1,0 +1,179 @@
+@use '../variables.scss' as *;
+@use '../mixins.scss' as *;
+
+.contact-page {
+  padding: $spacing-xxl 0;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: $spacing-xxl;
+}
+
+.page-title {
+  margin-bottom: $spacing-sm !important;
+  position: relative;
+  padding-bottom: $spacing-sm;
+  
+  @include section-title(center);
+}
+
+.page-subtitle {
+  color: $dark-gray;
+  font-size: 1.2rem !important;
+}
+
+.contact-info {
+  padding: $spacing-lg;
+  height: 100%;
+}
+
+.info-title {
+  margin-bottom: $spacing-lg !important;
+  color: $primary-color;
+  position: relative;
+  padding-bottom: $spacing-sm;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: $secondary-color;
+  }
+}
+
+.info-item {
+  display: flex;
+  margin-bottom: $spacing-md;
+}
+
+.info-icon {
+  color: $secondary-color;
+  font-size: 2rem !important;
+  margin-right: $spacing-sm;
+}
+
+.info-label {
+  margin-bottom: $spacing-xs !important;
+  color: $primary-color;
+}
+
+.info-text {
+  color: $dark-gray;
+  
+  a {
+    color: $secondary-color;
+    transition: $transition;
+    
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.business-hours {
+  margin-top: $spacing-lg;
+  padding-top: $spacing-md;
+  border-top: 1px solid $medium-gray;
+}
+
+.hours-title {
+  margin-bottom: $spacing-sm !important;
+  color: $primary-color;
+}
+
+.hours-text {
+  color: $dark-gray;
+  line-height: 1.8 !important;
+}
+
+.contact-form-container {
+  padding: $spacing-lg;
+}
+
+.form-title {
+  margin-bottom: $spacing-lg !important;
+  color: $primary-color;
+  position: relative;
+  padding-bottom: $spacing-sm;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: $secondary-color;
+  }
+}
+
+.form-alert {
+  margin-bottom: $spacing-md !important;
+}
+
+.submit-button {
+  padding: 0.75rem 2rem !important;
+  background-color: $primary-color !important;
+  
+  &:hover {
+    background-color: $secondary-color !important;
+  }
+}
+
+.map-container {
+  margin-top: $spacing-xxl;
+}
+
+.map-title {
+  margin-bottom: $spacing-md !important;
+  color: $primary-color;
+  position: relative;
+  padding-bottom: $spacing-sm;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: $secondary-color;
+  }
+}
+
+.map-placeholder {
+  height: 400px;
+  background-color: $light-gray;
+  border-radius: $border-radius;
+  @include flex-center;
+}
+
+.map-text {
+  color: $dark-gray;
+}
+
+@include respond-to(md) {
+  .contact-page {
+    padding: $spacing-xl 0;
+  }
+  
+  .page-header {
+    margin-bottom: $spacing-xl;
+  }
+  
+  .contact-info {
+    margin-bottom: $spacing-lg;
+  }
+  
+  .map-container {
+    margin-top: $spacing-xl;
+  }
+  
+  .map-placeholder {
+    height: 300px;
+  }
+}

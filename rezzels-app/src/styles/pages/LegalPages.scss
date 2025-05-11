@@ -1,0 +1,134 @@
+@use '../variables.scss' as *;
+@use '../mixins.scss' as *;
+
+.legal-page {
+  padding: $spacing-xxl 0;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: $spacing-xl;
+}
+
+.page-title {
+  margin-bottom: $spacing-sm !important;
+  position: relative;
+  padding-bottom: $spacing-sm;
+  
+  @include section-title(center);
+}
+
+.page-subtitle {
+  color: $dark-gray;
+  font-size: 1.2rem !important;
+}
+
+.legal-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.legal-intro {
+  margin-bottom: 2.5rem !important;
+  font-size: 1.1rem !important;
+  line-height: 1.8 !important;
+  color: $text-color;
+}
+
+.legal-section {
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  margin-bottom: $spacing-md !important;
+  color: $primary-color;
+  font-weight: 600 !important;
+}
+
+.section-content {
+  margin-bottom: $spacing-md !important;
+  color: $text-color;
+  line-height: 1.8 !important;
+}
+
+.legal-list {
+  padding-left: $spacing-md;
+  margin-bottom: $spacing-md;
+  
+  li {
+    margin-bottom: 0.75rem;
+    color: $text-color;
+    line-height: 1.6;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.contact-info {
+  background-color: $light-gray;
+  padding: $spacing-md;
+  border-radius: $border-radius;
+  margin-top: $spacing-sm !important;
+  line-height: 1.8 !important;
+}
+
+.legal-footer {
+  margin-top: $spacing-xl;
+  text-align: center;
+  color: $dark-gray;
+}
+
+.legal-accordion {
+  margin-bottom: $spacing-sm !important;
+  
+  &:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  .MuiAccordionSummary-root {
+    background-color: $light-gray;
+  }
+  
+  .MuiAccordionDetails-root {
+    padding: $spacing-md !important;
+  }
+}
+
+.cookie-message {
+  text-align: center;
+  padding: 2.5rem !important;
+  margin-bottom: $spacing-xl !important;
+  background-color: #f8f9fa !important;
+  border-radius: $border-radius !important;
+}
+
+.cookie-title {
+  margin-bottom: $spacing-md !important;
+  color: $primary-color;
+}
+
+.cookie-text {
+  font-size: 1.1rem !important;
+  color: $text-color;
+}
+
+@include respond-to(md) {
+  .legal-page {
+    padding: $spacing-xl 0;
+  }
+  
+  .page-header {
+    margin-bottom: $spacing-lg;
+  }
+  
+  .legal-section {
+    margin-bottom: $spacing-lg;
+  }
+  
+  .cookie-message {
+    padding: $spacing-md !important;
+    margin-bottom: $spacing-lg !important;
+  }
+}

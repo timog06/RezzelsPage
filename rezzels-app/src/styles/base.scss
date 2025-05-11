@@ -1,0 +1,167 @@
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-body;
+  line-height: 1.6;
+  color: $text-color;
+  background-color: $white;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+  transition: $transition;
+  
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  line-height: 1.2;
+  margin-bottom: $spacing-sm;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+p {
+  margin-bottom: $spacing-sm;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  font-family: $font-body;
+  border: none;
+  background: $primary-color;
+  color: $white;
+  padding: 0.75rem 1.5rem;
+  border-radius: $border-radius-sm;
+  font-weight: 500;
+  transition: $transition;
+  
+  &:hover {
+    background: $secondary-color;
+  }
+  
+  &:focus {
+    outline: none;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 $spacing-sm;
+}
+
+.section {
+  padding: $spacing-xxl 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+// Utility classes
+.text-center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: $spacing-xs;
+}
+
+.mb-2 {
+  margin-bottom: $spacing-sm;
+}
+
+.mb-3 {
+  margin-bottom: $spacing-md;
+}
+
+.mb-4 {
+  margin-bottom: $spacing-lg;
+}
+
+.mb-5 {
+  margin-bottom: $spacing-xl;
+}
+
+.mt-1 {
+  margin-top: $spacing-xs;
+}
+
+.mt-2 {
+  margin-top: $spacing-sm;
+}
+
+.mt-3 {
+  margin-top: $spacing-md;
+}
+
+.mt-4 {
+  margin-top: $spacing-lg;
+}
+
+.mt-5 {
+  margin-top: $spacing-xl;
+}
+
+@include respond-to(md) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  .section {
+    padding: $spacing-xl 0;
+  }
+}

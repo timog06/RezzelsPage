@@ -1,0 +1,79 @@
+@use '../variables.scss' as *;
+@use '../mixins.scss' as *;
+
+.not-found-page {
+  padding: 6rem 0;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.not-found-content {
+  text-align: center;
+}
+
+.error-code {
+  font-size: 8rem !important;
+  font-weight: 700 !important;
+  color: $secondary-color;
+  margin-bottom: $spacing-sm !important;
+  line-height: 1 !important;
+}
+
+.error-title {
+  margin-bottom: $spacing-md !important;
+  color: $primary-color;
+}
+
+.error-message {
+  font-size: 1.2rem !important;
+  color: $dark-gray;
+  margin-bottom: $spacing-xl !important;
+  max-width: 600px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.action-buttons {
+  @include flex-center;
+  gap: $spacing-md;
+}
+
+.home-button {
+  background-color: $primary-color !important;
+  padding: 0.75rem 2rem !important;
+  
+  &:hover {
+    background-color: $secondary-color !important;
+  }
+}
+
+.shop-button {
+  border-color: $primary-color !important;
+  color: $primary-color !important;
+  padding: 0.75rem 2rem !important;
+  
+  &:hover {
+    background-color: rgba($primary-color, 0.1) !important;
+  }
+}
+
+@include respond-to(md) {
+  .not-found-page {
+    padding: $spacing-xxl 0;
+  }
+  
+  .error-code {
+    font-size: 6rem !important;
+  }
+  
+  .error-message {
+    font-size: 1.1rem !important;
+    margin-bottom: $spacing-lg !important;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: $spacing-sm;
+  }
+}

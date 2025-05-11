@@ -1,0 +1,155 @@
+@use '../variables.scss' as *;
+@use '../mixins.scss' as *;
+
+.about-page {
+  padding: $spacing-xxl 0;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: $spacing-xxl;
+}
+
+.page-title {
+  margin-bottom: $spacing-sm !important;
+  position: relative;
+  padding-bottom: $spacing-sm;
+  
+  @include section-title(center);
+}
+
+.page-subtitle {
+  color: $dark-gray;
+  font-size: 1.2rem !important;
+}
+
+.about-section {
+  margin-bottom: $spacing-xxl;
+}
+
+.about-image-container {
+  height: 100%;
+  @include flex-center;
+}
+
+.about-image {
+  max-width: 100%;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+}
+
+.about-content {
+  padding: $spacing-sm;
+}
+
+.section-title {
+  margin-bottom: $spacing-md !important;
+  color: $primary-color;
+  position: relative;
+  
+  &:not(.text-center) {
+    @include section-title(left);
+  }
+  
+  &.text-center {
+    @include section-title(center);
+  }
+}
+
+.section-text {
+  margin-bottom: $spacing-md !important;
+  color: $text-color;
+  line-height: 1.8 !important;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.mission-section {
+  background-color: $light-gray;
+  padding: $spacing-xxl;
+  border-radius: $border-radius;
+  margin-bottom: $spacing-xxl;
+}
+
+.values-grid {
+  margin-top: $spacing-xl;
+}
+
+.value-card {
+  background-color: $white;
+  padding: $spacing-lg;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  height: 100%;
+  @include card-hover;
+}
+
+.value-title {
+  color: $primary-color;
+  margin-bottom: $spacing-sm !important;
+  position: relative;
+  padding-bottom: 0.75rem;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: $secondary-color;
+  }
+}
+
+.value-text {
+  color: $dark-gray;
+  line-height: 1.6 !important;
+}
+
+.commitment-section {
+  margin-bottom: $spacing-xl;
+}
+
+.commitment-content {
+  padding: $spacing-sm;
+}
+
+.commitment-image-container {
+  height: 100%;
+  @include flex-center;
+}
+
+.commitment-image {
+  max-width: 100%;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+}
+
+@include respond-to(md) {
+  .about-page {
+    padding: $spacing-xl 0;
+  }
+  
+  .page-header {
+    margin-bottom: $spacing-xl;
+  }
+  
+  .about-section {
+    margin-bottom: $spacing-xl;
+  }
+  
+  .mission-section {
+    padding: $spacing-lg;
+    margin-bottom: $spacing-xl;
+  }
+  
+  .values-grid {
+    margin-top: $spacing-lg;
+  }
+  
+  .value-card {
+    margin-bottom: $spacing-sm;
+  }
+}
