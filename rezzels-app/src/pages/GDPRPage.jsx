@@ -1,152 +1,92 @@
-import { Container, Typography, Box, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
-import { ExpandMore } from '@mui/icons-material';
+import { Container, Typography, Box, Paper, List, ListItem, ListItemText, Divider } from '@mui/material';
 import '../styles/pages/LegalPages.scss';
 
 const GDPRPage = () => {
   return (
-    <div className="legal-page">
-      <Container maxWidth="lg">
-        <Box className="page-header">
-          <Typography variant="h2" className="page-title">
-            GDPR Compliance
+    <Container maxWidth="md" className="legal-page">
+      <Paper elevation={3} className="legal-container">
+        <Typography variant="h2" className="legal-title">
+          GDPR Compliance
+        </Typography>
+        <Typography variant="subtitle1" className="legal-subtitle">
+          (Or How We Pretend to Care About Your Privacy)
+        </Typography>
+        
+        <Divider className="legal-divider" />
+        
+        <Box className="legal-section">
+          <Typography variant="h4" className="section-title">
+            1. Data Collection (Everything. We Collect EVERYTHING.)
           </Typography>
-          <Typography variant="body1" className="page-subtitle">
-            How we protect your data and comply with GDPR regulations
+          <Typography variant="body1" className="section-text">
+            At Rezzels, we're committed to collecting every possible piece of data about you, including but not limited to: your browsing history, what you had for breakfast, your deepest fears, and that embarrassing thing you did at your friend's wedding in 2016 (yes, we know about that).
+          </Typography>
+          <Typography variant="body1" className="section-text">
+            We use cutting-edge technology to track your every move, including our proprietary "Mind-Reading Cookies" that can detect what you're thinking about buying before you even know you want it. It's not invasive; it's innovative!
           </Typography>
         </Box>
         
-        <Box className="legal-content">
-          <Typography variant="body1" className="legal-intro">
-            At Rezzels, we are committed to protecting your personal data and ensuring compliance with the 
-            General Data Protection Regulation (GDPR). This page explains how we collect, process, and 
-            protect your personal information.
+        <Box className="legal-section">
+          <Typography variant="h4" className="section-title">
+            2. How We Use Your Data (Spoiler: We Sell It)
           </Typography>
-          
-          <Accordion className="legal-accordion">
-            <AccordionSummary expandIcon={<ExpandMore />}>
-              <Typography variant="h6">What is GDPR?</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="body1">
-                The General Data Protection Regulation (GDPR) is a regulation in EU law on data protection 
-                and privacy for all individuals within the European Union and the European Economic Area. 
-                It addresses the export of personal data outside the EU and EEA areas.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          
-          <Accordion className="legal-accordion">
-            <AccordionSummary expandIcon={<ExpandMore />}>
-              <Typography variant="h6">What Personal Data Do We Collect?</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="body1">
-                We may collect the following personal data:
-              </Typography>
-              <ul>
-                <li>Contact information (name, email address, phone number, shipping address)</li>
-                <li>Account information (username, password)</li>
-                <li>Transaction information (purchase history, payment details)</li>
-                <li>Technical information (IP address, browser type, device information)</li>
-                <li>Usage information (how you interact with our website)</li>
-              </ul>
-            </AccordionDetails>
-          </Accordion>
-          
-          <Accordion className="legal-accordion">
-            <AccordionSummary expandIcon={<ExpandMore />}>
-              <Typography variant="h6">How Do We Use Your Personal Data?</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="body1">
-                We use your personal data for the following purposes:
-              </Typography>
-              <ul>
-                <li>To process and fulfill your orders</li>
-                <li>To manage your account</li>
-                <li>To communicate with you about your orders and account</li>
-                <li>To provide customer support</li>
-                <li>To improve our website and services</li>
-                <li>To send you marketing communications (with your consent)</li>
-                <li>To comply with legal obligations</li>
-              </ul>
-            </AccordionDetails>
-          </Accordion>
-          
-          <Accordion className="legal-accordion">
-            <AccordionSummary expandIcon={<ExpandMore />}>
-              <Typography variant="h6">Your Rights Under GDPR</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="body1">
-                Under GDPR, you have the following rights:
-              </Typography>
-              <ul>
-                <li>Right to access your personal data</li>
-                <li>Right to rectification of inaccurate personal data</li>
-                <li>Right to erasure of your personal data</li>
-                <li>Right to restrict processing of your personal data</li>
-                <li>Right to data portability</li>
-                <li>Right to object to processing of your personal data</li>
-                <li>Right to withdraw consent at any time</li>
-              </ul>
-              <Typography variant="body1">
-                To exercise any of these rights, please contact us at privacy@rezzels.com.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          
-          <Accordion className="legal-accordion">
-            <AccordionSummary expandIcon={<ExpandMore />}>
-              <Typography variant="h6">Data Security</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="body1">
-                We implement appropriate technical and organizational measures to protect your personal data 
-                against unauthorized or unlawful processing, accidental loss, destruction, or damage. We 
-                regularly review and update our security measures to ensure the highest level of protection.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          
-          <Accordion className="legal-accordion">
-            <AccordionSummary expandIcon={<ExpandMore />}>
-              <Typography variant="h6">Data Retention</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="body1">
-                We retain your personal data only for as long as necessary to fulfill the purposes for which 
-                it was collected, including for the purposes of satisfying any legal, accounting, or reporting 
-                requirements.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          
-          <Accordion className="legal-accordion">
-            <AccordionSummary expandIcon={<ExpandMore />}>
-              <Typography variant="h6">Contact Us</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="body1">
-                If you have any questions about our GDPR compliance or how we handle your personal data, 
-                please contact our Data Protection Officer at:
-              </Typography>
-              <Typography variant="body1" className="contact-info">
-                Email: privacy@rezzels.com<br />
-                Address: Bahnhofstrasse 123, 8001 Zürich, Switzerland<br />
-                Phone: +41 12 345 67 89
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
+          <Typography variant="body1" className="section-text">
+            Your personal data is incredibly valuable to us—so valuable that we sell it to the highest bidder! We've established a thriving marketplace where companies can bid on your information. The current record is $3.50 for a complete psychological profile of a user who spent 47 minutes deciding whether to buy a black or navy hoodie.
+          </Typography>
+          <Typography variant="body1" className="section-text">
+            We also use your data to create eerily accurate targeted ads that will follow you around the internet like a clingy ex. That product you looked at once? Prepare to see it in your dreams.
+          </Typography>
         </Box>
         
-        <Box className="legal-footer">
-          <Typography variant="body2">
-            Last updated: May 11, 2025
+        <Box className="legal-section">
+          <Typography variant="h4" className="section-title">
+            3. Data Security (We Use a Password: "password123")
+          </Typography>
+          <Typography variant="body1" className="section-text">
+            We store all your sensitive information in a secure Excel spreadsheet on our intern's laptop. Don't worry, it's protected by a sticky note that says "DO NOT OPEN" on the screen. For extra security, we've instructed all employees to look both ways before sharing your data with third parties.
+          </Typography>
+          <Typography variant="body1" className="section-text">
+            In the unlikely event of a data breach (which happens every Tuesday between 2-4 PM), we'll notify you within 5-7 business years. Or whenever we feel like it. Probably never, actually.
           </Typography>
         </Box>
-      </Container>
-    </div>
+        
+        <Box className="legal-section">
+          <Typography variant="h4" className="section-title">
+            4. Your Rights Under GDPR (Theoretically)
+          </Typography>
+          <Typography variant="body1" className="section-text">
+            According to the GDPR, you have the right to access, correct, or delete your personal data. To exercise these rights, simply solve this captcha that requires identifying quantum particles, translate your request into ancient Sumerian, and send it via carrier pigeon to our office in Antarctica.
+          </Typography>
+          <Typography variant="body1" className="section-text">
+            Alternatively, you can fill out our "Data Subject Request Form," which automatically redirects to a 404 page. We're working on fixing this issue (we're not).
+          </Typography>
+        </Box>
+        
+        <Box className="legal-section">
+          <Typography variant="h4" className="section-title">
+            5. International Data Transfers (Frequent Flyer Miles for Your Data)
+          </Typography>
+          <Typography variant="body1" className="section-text">
+            Your data loves to travel! We regularly send it on exotic vacations to countries with zero privacy laws. Your personal information has probably seen more of the world than you have. It's currently sipping cocktails on a beach somewhere, being shared freely with anyone who walks by.
+          </Typography>
+          <Typography variant="body1" className="section-text">
+            We use state-of-the-art security for these transfers, like password-protected ZIP files and emails with "CONFIDENTIAL" in the subject line. That's basically military-grade encryption, right?
+          </Typography>
+        </Box>
+        
+        <Box className="legal-section">
+          <Typography variant="h4" className="section-title">
+            6. Contact Our Data Protection Officer
+          </Typography>
+          <Typography variant="body1" className="section-text">
+            Questions about your privacy? Our Data Protection Officer, Dave (who is actually just a houseplant with googly eyes), is here to help! You can reach Dave by shouting your concerns into the void or by sending an email to blackhole@rezzels.com.
+          </Typography>
+          <Typography variant="body1" className="section-text">
+            If you've actually read this entire policy, you're either a privacy lawyer or have way too much free time. Either way, use code "PRIVACYPARANOID" for a 2% discount that we'll immediately cancel if you try to use it.
+          </Typography>
+        </Box>
+      </Paper>
+    </Container>
   );
 };
 
