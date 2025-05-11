@@ -1,0 +1,99 @@
+@use 'sass:color';
+@use '../../variables.scss' as *;
+@use '../../mixins.scss' as *;
+
+.newsletter-section {
+  background-color: $white;
+  padding: $spacing-xxl 0;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba($primary-color, 0.05), rgba($secondary-color, 0.05));
+    z-index: 0;
+  }
+}
+
+.newsletter-container {
+  padding: $spacing-xl;
+  position: relative;
+  z-index: 1;
+  border-radius: $border-radius;
+  background: linear-gradient(135deg, $white 0%, $light-gray 100%);
+  border-top: 4px solid $secondary-color;
+}
+
+.newsletter-text {
+  margin-bottom: $spacing-lg !important;
+  max-width: 600px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.subscriber-count {
+  text-align: center;
+  margin-bottom: $spacing-md;
+  
+  strong {
+    color: $secondary-color;
+    font-size: 1.2rem;
+    display: inline-block;
+    position: relative;
+  }
+}
+
+.newsletter-form {
+  max-width: 500px;
+  margin: 0 auto $spacing-sm;
+}
+
+.newsletter-input {
+  margin-bottom: $spacing-sm !important;
+  
+  .MuiOutlinedInput-root {
+    &:hover .MuiOutlinedInput-notchedOutline {
+      border-color: $secondary-color;
+    }
+    
+    &.Mui-focused .MuiOutlinedInput-notchedOutline {
+      border-color: $secondary-color;
+    }
+  }
+}
+
+.newsletter-button {
+  background-color: $secondary-color !important;
+  color: $white !important;
+  padding: 0.75rem 2rem !important;
+  border-radius: $border-radius-sm !important;
+  
+  &:hover {
+    background-color: color.adjust($secondary-color, $lightness: -10%);
+  }
+  
+  &.Mui-disabled {
+    background-color: $medium-gray !important;
+    color: $dark-gray !important;
+  }
+}
+
+.thank-you-message {
+  text-align: center;
+  color: $secondary-color;
+  font-weight: 500;
+  margin-top: $spacing-sm !important;
+  padding: $spacing-sm;
+  background-color: rgba($secondary-color, 0.1);
+  border-radius: $border-radius-sm;
+}
+
+.info-message {
+  text-align: center;
+  color: $dark-gray;
+  margin-top: $spacing-sm !important;
+}

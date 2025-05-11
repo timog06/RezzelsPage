@@ -49,7 +49,8 @@
 .product-image {
   transition: transform 0.5s ease;
   object-fit: contain !important;
-  max-height: 250px !important;
+  height: 250px !important;
+  width: 250px !important;
   margin: 0 auto !important;
 }
 

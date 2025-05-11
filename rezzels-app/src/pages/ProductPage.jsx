@@ -94,7 +94,7 @@ const ProductPage = () => {
             <Box className="product-images">
               <Box className="main-image-container">
                 <img 
-                  src={`${product.images[currentImage]}`} 
+                  src={`../${product.images[currentImage]}`} 
                   alt={product.name} 
                   className="main-image"
                   style={{ maxHeight: "300px", maxWidth: "100%", objectFit: "contain", margin: "0 auto", display: "block" }}
@@ -108,7 +108,7 @@ const ProductPage = () => {
                     className={`thumbnail ${index === currentImage ? 'active' : ''}`}
                     onClick={() => handleImageChange(index)}
                   >
-                    <img src={`${image}`} alt={`${product.name} thumbnail ${index + 1}`} />
+                    <img src={`../${image}`} alt={`${product.name} thumbnail ${index + 1}`} />
                   </Box>
                 ))}
               </Box>
@@ -286,7 +286,7 @@ const ProductPage = () => {
                   <Box className="related-product-card">
                     <Link to={`/product/${relatedProduct.id}`} className="product-link">
                       <img 
-                        src={`${relatedProduct.images[0]}`} 
+                        src={`../${relatedProduct.images[0]}`} 
                         alt={relatedProduct.name} 
                         className="related-product-image"
                         style={{ height: "150px", maxWidth: "100%", objectFit: "contain", margin: "0 auto", display: "block" }}
