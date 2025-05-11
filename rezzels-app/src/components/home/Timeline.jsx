@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { Container, Typography, Box } from '@mui/material';
 import { animate } from 'animejs';
+import { createTimeline } from 'animejs';
+import { stagger } from 'animejs';
 import timelineData from '../../data/timeline.json';
 import '../../styles/components/home/Timeline.scss';
 
@@ -26,15 +28,17 @@ const Timeline = () => {
   }, []);
   
   const animateTimeline = () => {
-    animate.timeline({
+    const timeline = createTimeline({
       easing: 'easeOutExpo',
-    })
+    });
+    
+    timeline
     .add({
       targets: '.timeline-title, .timeline-subtitle',
       opacity: [0, 1],
       translateY: [50, 0],
       duration: 1000,
-      delay: animate.stagger(200)
+      delay: stagger(200)
     })
     .add({
       targets: '.timeline-item',
@@ -42,7 +46,7 @@ const Timeline = () => {
       translateX: function(el) {
         return el.classList.contains('left') ? [-100, 0] : [100, 0];
       },
-      delay: animate.stagger(200),
+      delay: stagger(200),
       duration: 800
     }, '-=800')
     .add({
@@ -50,7 +54,7 @@ const Timeline = () => {
       scale: [0, 1],
       opacity: [0, 1],
       duration: 600,
-      delay: animate.stagger(200)
+      delay: stagger(200)
     }, '-=1200')
     .add({
       targets: '.timeline-line',
