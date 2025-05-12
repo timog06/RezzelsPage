@@ -30,7 +30,7 @@ const Header = () => {
   };
 
   const navItems = [
-    { name: 'Home', path: '/' },
+    { name: 'Home', path: '' },
     { name: 'Shop', path: '/shop' },
     { name: 'Team', path: '/team' },
     { name: 'About', path: '/about' },
@@ -57,7 +57,7 @@ const Header = () => {
             <Typography
               variant="h6"
               component={Link}
-              to="/"
+              to=""
               className="logo"
             >
               REZZELS
