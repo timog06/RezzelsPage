@@ -6,58 +6,58 @@ const JobsPage = () => {
   const jobs = [
     {
       id: 1,
-      title: 'Fashion Designer',
+      title: 'Fashion Designer (Slave)',
       location: 'Zürich, Switzerland',
-      type: 'Full-time',
-      description: 'We are looking for a creative Fashion Designer to join our team. The ideal candidate will have experience in sustainable fashion design and a passion for creating stylish, eco-friendly clothing.',
+      type: 'Full-time (24/7/365)',
+      description: 'We are looking for a creative Fashion Designer to join our team. You will work 18-hour days designing clothes while we take all the credit. Sleep is for the weak, and weekends are a myth invented by lesser companies.',
       requirements: [
-        'Bachelor\'s degree in Fashion Design or related field',
-        'Minimum 3 years of experience in fashion design',
-        'Proficiency in design software (Adobe Illustrator, Photoshop)',
-        'Knowledge of sustainable materials and practices',
-        'Strong portfolio demonstrating your design skills'
+        'Bachelor\'s, Master\'s, and PhD in Fashion Design (all required)',
+        'Minimum 30 years of experience (applicants under 25 preferred)',
+        'Ability to read minds, as we won\'t tell you what we want',
+        'Must provide your own sewing machine, fabric, and office chair',
+        'Willing to sign a 10-year binding contract with no possibility of quitting'
       ]
     },
     {
       id: 2,
-      title: 'Marketing Specialist',
-      location: 'Remote',
-      type: 'Full-time',
-      description: 'Join our marketing team to help promote Rezzels\' sustainable fashion brand. You\'ll be responsible for creating engaging content, managing social media, and developing marketing strategies.',
+      title: 'Marketing Specialist (Miracle Worker)',
+      location: 'Remote (but we\'ll still watch you)',
+      type: 'Full-time (including nights, holidays, and your birthday)',
+      description: 'Join our marketing team to make our mediocre products seem amazing! You\'ll be responsible for creating viral content with zero budget, managing social media 24/7, and achieving impossible sales targets that increase by 500% each month.',
       requirements: [
-        'Bachelor\'s degree in Marketing, Communications, or related field',
-        '2+ years of experience in digital marketing',
-        'Experience with social media management and content creation',
-        'Knowledge of SEO and analytics tools',
-        'Excellent written and verbal communication skills'
+        'Must have 1M+ personal followers on all social platforms',
+        'Ability to make content go viral on command',
+        'Experience working without sleep for extended periods',
+        'Willing to pay for all marketing expenses out of pocket',
+        'Your firstborn child as collateral for performance guarantees'
       ]
     },
     {
       id: 3,
-      title: 'E-commerce Manager',
+      title: 'E-commerce Manager (Scapegoat)',
       location: 'Zürich, Switzerland',
-      type: 'Full-time',
-      description: 'We\'re seeking an experienced E-commerce Manager to oversee our online store operations. You\'ll be responsible for optimizing the customer experience, managing inventory, and driving online sales.',
+      type: 'Full-time (until we blame you for poor sales)',
+      description: 'We\'re seeking an experienced E-commerce Manager to take the fall when our unrealistic sales targets aren\'t met. You\'ll be responsible for everything that goes wrong with the website, including server outages, bad weather, and global economic downturns.',
       requirements: [
-        'Bachelor\'s degree in Business, E-commerce, or related field',
-        '3+ years of experience in e-commerce management',
-        'Experience with e-commerce platforms and tools',
-        'Strong analytical skills and data-driven approach',
-        'Knowledge of UX/UI principles and best practices'
+        'Thick skin and no self-esteem',
+        'Ability to work with a website built in 1997 that crashes hourly',
+        'Experience being blamed for things beyond your control',
+        'Willing to be paid in "exposure" and "experience"',
+        'Must sign waiver accepting responsibility for all company failures'
       ]
     },
     {
       id: 4,
-      title: 'Customer Service Representative',
+      title: 'Customer Abuse Absorber',
       location: 'Zürich, Switzerland',
-      type: 'Part-time',
-      description: 'Provide exceptional customer service to Rezzels customers. You\'ll be handling inquiries, processing orders, and ensuring a positive shopping experience for our customers.',
+      type: 'Part-time (but on-call 24/7)',
+      description: 'Be the human punching bag for angry customers! You\'ll be handling complaints about products we know are defective, processing returns we\'ll never approve, and maintaining a smile while being verbally abused by people who think the customer is always right.',
       requirements: [
-        'High school diploma or equivalent',
-        'Previous customer service experience preferred',
-        'Excellent communication and interpersonal skills',
-        'Ability to work weekends and some evenings',
-        'Fluency in English and German'
+        'No education required (we prefer if you can\'t do math)',
+        'Must own a personal phone as we won\'t provide one',
+        'Ability to apologize for things that aren\'t your fault',
+        'No holidays, vacations, or sick days allowed',
+        'Fluency in English, German, and at least 17 other languages'
       ]
     }
   ];
@@ -84,14 +84,14 @@ const JobsPage = () => {
             of our mission.
           </Typography>
           <Typography variant="body1" className="intro-text">
-            As a member of our team, you'll enjoy:
+            As a member of our team, you'll "enjoy":
           </Typography>
           <ul className="benefits-list">
-            <li>A collaborative and inclusive work environment</li>
-            <li>Competitive salary and benefits</li>
-            <li>Professional development opportunities</li>
-            <li>Employee discount on Rezzels products</li>
-            <li>Flexible work arrangements</li>
+            <li>A cutthroat environment where we pit employees against each other for entertainment</li>
+            <li>Competitive salary (competing with minimum wage... and losing)</li>
+            <li>Professional development opportunities (you develop, we profit)</li>
+            <li>Employee discount on Rezzels products (a whopping 0.5% off)</li>
+            <li>Flexible work arrangements (you can choose which 18 hours of the day you work)</li>
           </ul>
         </Box>
         
