@@ -142,58 +142,50 @@ const ContactPage = () => {
               )}
               
               <form className="contact-form" onSubmit={handleSubmit}>
-                <Grid container spacing={2}>
-                  <Grid item xs={12} sm={6}>
-                    <TextField
-                      fullWidth
-                      label="Your Name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      variant="outlined"
-                    />
-                  </Grid>
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                  <TextField
+                    fullWidth
+                    label="Your Name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    variant="outlined"
+                  />
                   
-                  <Grid item xs={12} sm={6}>
-                    <TextField
-                      fullWidth
-                      label="Your Email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      variant="outlined"
-                    />
-                  </Grid>
+                  <TextField
+                    fullWidth
+                    label="Your Email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    variant="outlined"
+                  />
                   
-                  <Grid item xs={12}>
-                    <TextField
-                      fullWidth
-                      label="Subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      variant="outlined"
-                    />
-                  </Grid>
+                  <TextField
+                    fullWidth
+                    label="Subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    variant="outlined"
+                  />
                   
-                  <Grid item xs={12}>
-                    <TextField
-                      fullWidth
-                      label="Your Message"
-                      name="message"
-                      multiline
-                      rows={6}
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      variant="outlined"
-                    />
-                  </Grid>
+                  <TextField
+                    fullWidth
+                    label="Your Message"
+                    name="message"
+                    multiline
+                    rows={6}
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    variant="outlined"
+                  />
                   
-                  <Grid item xs={12}>
+                  <Box sx={{ mt: 2 }}>
                     <Button
                       type="submit"
                       variant="contained"
@@ -202,8 +194,8 @@ const ContactPage = () => {
                     >
                       Send Message
                     </Button>
-                  </Grid>
-                </Grid>
+                  </Box>
+                </Box>
               </form>
             </Paper>
           </Grid>
