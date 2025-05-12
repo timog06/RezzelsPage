@@ -53,7 +53,7 @@ const TeamPage = () => {
             Check out our current openings or send us your resume for future opportunities.
           </Typography>
           <Box className="join-button-container">
-            <a href="/jobs" className="join-button">View Open Positions</a>
+            <a href="/RezzelsPage/jobs" className="join-button">View Open Positions</a>
           </Box>
         </Box>
       </Container>
