@@ -1,15 +1,28 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemText, Box, Container, InputBase } from '@mui/material';
 import { Menu as MenuIcon, Search as SearchIcon, ShoppingBag as ShoppingBagIcon } from '@mui/icons-material';
 import '../styles/components/Header.scss';
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [searchInput, setSearchInput] = useState('');
   const location = useLocation();
+  const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+  };
+  
+  const handleSearchChange = (e) => {
+    setSearchInput(e.target.value);
+  };
+  
+  const handleSearchSubmit = (e) => {
+    if (e.key === 'Enter' && searchInput.trim()) {
+      navigate(`/shop?search=${encodeURIComponent(searchInput.trim())}`);
+      setSearchInput('');
+    }
   };
 
   const isActive = (path) => {
@@ -70,6 +83,9 @@ const Header = () => {
               <InputBase
                 placeholder="Search…"
                 className="search-input"
+                value={searchInput}
+                onChange={handleSearchChange}
+                onKeyPress={handleSearchSubmit}
               />
             </Box>
             <IconButton

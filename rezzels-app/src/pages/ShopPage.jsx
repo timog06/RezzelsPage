@@ -9,10 +9,11 @@ const ShopPage = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const categoryParam = queryParams.get('category');
+  const searchParam = queryParams.get('search');
   
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState(searchParam || '');
   const [category, setCategory] = useState(categoryParam || 'all');
   const [sortBy, setSortBy] = useState('default');
   
@@ -22,6 +23,13 @@ const ShopPage = () => {
     setProducts(productsData);
     filterProducts(searchTerm, category, sortBy);
   }, []);
+  
+  // Update search term when URL parameter changes
+  useEffect(() => {
+    if (searchParam) {
+      setSearchTerm(searchParam);
+    }
+  }, [searchParam]);
   
   useEffect(() => {
     filterProducts(searchTerm, category, sortBy);
@@ -100,6 +108,7 @@ const ShopPage = () => {
                     </InputAdornment>
                   ),
                 }}
+                autoFocus={!!searchParam}
               />
             </Grid>
             

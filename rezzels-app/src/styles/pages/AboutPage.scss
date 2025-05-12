@@ -77,6 +77,10 @@
   margin-top: $spacing-xl;
 }
 
+.value-card-wrapper {
+  width: 100% !important;
+}
+
 .value-card {
   background-color: $white;
   padding: $spacing-lg;

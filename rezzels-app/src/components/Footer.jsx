@@ -63,7 +63,8 @@ const Footer = () => {
           </Box>
           
           <Typography variant="body2" className="copyright">
-            &copy; {new Date().getFullYear()} Rezzels. All rights reserved.
+            &copy; {new Date().getFullYear()} Rezzels. All rights reserved. 
+            <span className="made-by">Made by <a href="https://github.com/timog06" target="_blank" rel="noopener noreferrer">T.G.</a></span>
           </Typography>
         </Box>
       </Container>
