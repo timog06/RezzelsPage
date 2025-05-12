@@ -1,4 +1,5 @@
 import { Container, Typography, Grid, Box, Card, CardMedia, CardContent } from '@mui/material';
+import { Link } from 'react-router-dom';
 import teamData from '../data/team.json';
 import '../styles/pages/TeamPage.scss';
 
@@ -53,7 +54,7 @@ const TeamPage = () => {
             Check out our current openings or send us your resume for future opportunities.
           </Typography>
           <Box className="join-button-container">
-            <a href="/RezzelsPage/jobs" className="join-button">View Open Positions</a>
+            <Link to="/jobs" className="join-button">View Open Positions</Link>
           </Box>
         </Box>
       </Container>
