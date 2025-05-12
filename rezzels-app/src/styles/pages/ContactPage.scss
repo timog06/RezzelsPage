@@ -92,6 +92,8 @@
 
 .contact-form-container {
   padding: $spacing-lg;
+  height: 100%;
+  margin-top: 1rem;
 }
 
 .form-title {
@@ -124,8 +126,21 @@
   }
 }
 
+.contact-info-wrapper,
+.contact-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 72%;
+}
+
+.contact-info,
+.contact-form-container {
+  flex: 1;
+}
+
 .map-container {
   margin-top: $spacing-xxl;
+  clear: both;
 }
 
 .map-title {

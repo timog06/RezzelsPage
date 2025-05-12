@@ -69,7 +69,7 @@ const ContactPage = () => {
         </Box>
         
         <Grid container spacing={4}>
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={5} className="contact-info-wrapper">
             <Paper elevation={3} className="contact-info">
               <Typography variant="h4" className="info-title">
                 Get In Touch
@@ -126,7 +126,7 @@ const ContactPage = () => {
             </Paper>
           </Grid>
           
-          <Grid item xs={12} md={7}>
+          <Grid item xs={12} md={7} className="contact-form-wrapper">
             <Paper elevation={3} className="contact-form-container">
               <Typography variant="h4" className="form-title">
                 Send Us a Message
